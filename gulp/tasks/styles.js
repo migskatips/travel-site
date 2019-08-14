@@ -13,6 +13,5 @@ gulp.task('styles', function(){
 	.on('error',function(errorInfo){
 		console.log(errorInfo.toString());
 		this.emit('end');
-	})
-	.pipe(gulp.dest('./app/assets/temp/styles'));
+	}).pipe(gulp.dest('./app/assets/temp/styles'));
 });

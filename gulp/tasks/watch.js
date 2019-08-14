@@ -10,6 +10,7 @@ gulp.task('watch', function(){
 			baseDir: "app"
 		}
 	});
+
 	watch('./app/index.html',function(){
 		browserSync.reload();
 	});
@@ -21,6 +22,6 @@ gulp.task('watch', function(){
 });
 
 gulp.task('cssInject',['styles'], function(){
-	return gulp.src('./app/assets/temp/styles')
-	.pipe(browserSync.stream())
+	return gulp.src('./app/assets/temp/styles/styles.css')
+	.pipe(browserSync.stream());
 });
